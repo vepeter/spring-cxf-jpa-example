@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <department id="1" name="Department 1"/>
+    <department id="2" name="Department 2"/>
+    <employee id="1" firstname="User 1 First Name" lastname="User 1 Last Name" email="user1@test.com" birthdate="1988-11-01 00:00:00" department_id="1"/>
+    <employee id="2" firstname="User 2 First Name" lastname="User 2 Last Name" email="user2@test.com" birthdate="1988-11-02 00:00:00" department_id="1"/>
+    <employee id="3" firstname="User 3 First Name" lastname="User 3 Last Name" email="user3@test.com" birthdate="1988-11-03 00:00:00" department_id="2"/>
+</dataset>
