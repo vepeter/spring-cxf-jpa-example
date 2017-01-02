@@ -2,6 +2,7 @@ package com.vepeter.example.springcxfjpa.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,6 +16,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.joda.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.vepeter.example.springcxfjpa.model.converter.LocalDateAttributeConverter;
 
 @Entity
 @Table(name = "employee")
@@ -32,6 +34,7 @@ public class Employee implements Serializable {
 
     private String email;
 
+    @Convert(converter = LocalDateAttributeConverter.class)
     private LocalDate birthDate;
 
     @NotNull

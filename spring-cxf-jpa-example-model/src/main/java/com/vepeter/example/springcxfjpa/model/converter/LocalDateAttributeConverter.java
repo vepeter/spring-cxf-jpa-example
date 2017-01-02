@@ -1,4 +1,4 @@
-package com.vepeter.example.springcxfjpa.service.converter;
+package com.vepeter.example.springcxfjpa.model.converter;
 
 import java.sql.Timestamp;
 
