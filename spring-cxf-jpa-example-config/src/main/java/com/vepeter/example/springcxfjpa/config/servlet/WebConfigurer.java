@@ -23,28 +23,18 @@ public class WebConfigurer implements ServletContextListener {
 
     public AnnotationConfigWebApplicationContext context;
 
-    public void setContext(AnnotationConfigWebApplicationContext context) {
-        this.context = context;
-    }
-
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext servletContext = sce.getServletContext();
         LOG.debug("Configuring Spring root application context");
 
-        AnnotationConfigWebApplicationContext rootContext = null;
+        context = new AnnotationConfigWebApplicationContext();
+        context.register(ApplicationConfiguration.class);
+        context.refresh();
 
-        if (context == null) {
-            rootContext = new AnnotationConfigWebApplicationContext();
-            rootContext.register(ApplicationConfiguration.class);
-            rootContext.refresh();
-        } else {
-            rootContext = context;
-        }
+        servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, context);
 
-        servletContext.setAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE, rootContext);
-
-        initCxfServlet(servletContext, rootContext);
+        initCxfServlet(servletContext, context);
 
         LOG.debug("Web application fully configured");
     }
