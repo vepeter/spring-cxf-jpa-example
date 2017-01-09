@@ -22,13 +22,13 @@ import com.vepeter.example.springcxfjpa.rest.V1Resource;
 @ImportResource({ "classpath:META-INF/cxf/cxf.xml" })
 @ComponentScan(basePackages = { "com.vepeter.example.springcxfjpa.rest" })
 public class RestConfiguration {
-    
+
     @Autowired
     private ApplicationContext applicationContext;
 
     @Autowired
     private V1Resource employeeResource;
-    
+
     @Bean
     public JacksonJsonProvider jsonProvider() {
         ObjectMapper mapper = new ObjectMapper();
@@ -37,7 +37,7 @@ public class RestConfiguration {
         mapper.setSerializationInclusion(Include.NON_EMPTY);
         return new JacksonJsonProvider(mapper);
     }
-    
+
     @Bean
     public Server employeeServiceRest() {
         SpringBus bus = applicationContext.getBean(Bus.DEFAULT_BUS_ID, SpringBus.class);

@@ -19,7 +19,7 @@ import com.vepeter.example.springcxfjpa.service.DepartmentService;
 
 @Component
 public class DepartmentResource {
-    
+
     private DepartmentService departmentService;
 
     @Autowired

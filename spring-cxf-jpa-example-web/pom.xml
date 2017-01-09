@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -15,11 +16,11 @@
 
 	<dependencies>
 
-        <dependency>
-            <groupId>com.vepeter.example</groupId>
-            <artifactId>spring-cxf-jpa-example-config</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+		<dependency>
+			<groupId>com.vepeter.example</groupId>
+			<artifactId>spring-cxf-jpa-example-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.vepeter.example</groupId>
@@ -57,11 +58,11 @@
 			<scope>runtime</scope>
 		</dependency>
 
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
 			<scope>runtime</scope>
-        </dependency>
+		</dependency>
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -75,10 +76,10 @@
 			</exclusions>
 		</dependency>
 
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
 			<scope>runtime</scope>
-        </dependency>
+		</dependency>
 	</dependencies>
 </project>

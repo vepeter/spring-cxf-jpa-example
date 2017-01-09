@@ -42,7 +42,8 @@ public class WebConfigurer implements ServletContextListener {
     /**
      * Initializes CXF.
      */
-    private ServletRegistration.Dynamic initCxfServlet(ServletContext servletContext, AnnotationConfigWebApplicationContext rootContext) {
+    private ServletRegistration.Dynamic initCxfServlet(ServletContext servletContext,
+            AnnotationConfigWebApplicationContext rootContext) {
         ServletRegistration.Dynamic cxfServlet = servletContext.addServlet("cxf", new CXFServlet());
         cxfServlet.addMapping("/api/*");
         cxfServlet.setLoadOnStartup(1);
@@ -52,7 +53,8 @@ public class WebConfigurer implements ServletContextListener {
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        WebApplicationContext webApplicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(sce.getServletContext());
+        WebApplicationContext webApplicationContext = WebApplicationContextUtils
+                .getRequiredWebApplicationContext(sce.getServletContext());
         AnnotationConfigWebApplicationContext.class.cast(webApplicationContext).close();
     }
 }

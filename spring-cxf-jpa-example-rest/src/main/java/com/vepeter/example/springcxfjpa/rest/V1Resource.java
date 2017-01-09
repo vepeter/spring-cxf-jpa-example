@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class V1Resource {
-    
+
     private EmplyeeResource emplyeeResource;
 
     private DepartmentResource departmentResource;
@@ -25,7 +25,7 @@ public class V1Resource {
     public EmplyeeResource employees(@Context ResourceContext resourceContext) {
         return resourceContext.initResource(emplyeeResource);
     }
-    
+
     @Path("/departments")
     public DepartmentResource departments(@Context ResourceContext resourceContext) {
         return resourceContext.initResource(departmentResource);

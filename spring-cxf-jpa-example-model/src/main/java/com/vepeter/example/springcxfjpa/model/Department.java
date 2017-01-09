@@ -23,7 +23,7 @@ public class Department implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
-    
+
     private String name;
 
     @OneToMany(mappedBy = "department", cascade = CascadeType.PERSIST)
@@ -65,10 +65,7 @@ public class Department implements Serializable {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 31)
-                        .append(id)
-                        .append(name)
-                        .toHashCode();
+        return new HashCodeBuilder(17, 31).append(id).append(name).toHashCode();
     }
 
     @Override
@@ -83,10 +80,7 @@ public class Department implements Serializable {
             return false;
         }
         Department rhs = (Department) obj;
-        return new EqualsBuilder()
-                        .append(id, rhs.id)
-                        .append(name, rhs.name)
-                        .isEquals();
+        return new EqualsBuilder().append(id, rhs.id).append(name, rhs.name).isEquals();
     }
 
     @Override

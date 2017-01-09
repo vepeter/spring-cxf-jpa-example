@@ -21,6 +21,7 @@ import com.vepeter.example.springcxfjpa.model.converter.LocalDateAttributeConver
 @Entity
 @Table(name = "employee")
 public class Employee implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -106,14 +107,8 @@ public class Employee implements Serializable {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 31)
-                        .append(id)
-                        .append(firstName)
-                        .append(lastName)
-                        .append(email)
-                        .append(birthDate)
-                        .append(department)
-                        .toHashCode();
+        return new HashCodeBuilder(17, 31).append(id).append(firstName).append(lastName).append(email).append(birthDate)
+                .append(department).toHashCode();
     }
 
     @Override
@@ -128,20 +123,15 @@ public class Employee implements Serializable {
             return false;
         }
         Employee rhs = (Employee) obj;
-        return new EqualsBuilder()
-                        .append(id, rhs.id)
-                        .append(firstName, rhs.firstName)
-                        .append(lastName, rhs.lastName)
-                        .append(email, rhs.email)
-                        .append(birthDate, rhs.birthDate)
-                        .append(department, rhs.department)
-                        .isEquals();
+        return new EqualsBuilder().append(id, rhs.id).append(firstName, rhs.firstName).append(lastName, rhs.lastName)
+                .append(email, rhs.email).append(birthDate, rhs.birthDate).append(department, rhs.department)
+                .isEquals();
     }
 
     @Override
     public String toString() {
-        return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", birthDate=" + birthDate + ", department="
-                + department + "]";
+        return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+                + ", birthDate=" + birthDate + ", department=" + department + "]";
     }
 
 }

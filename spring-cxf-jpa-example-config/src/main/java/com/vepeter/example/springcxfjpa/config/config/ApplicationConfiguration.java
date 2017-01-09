@@ -5,7 +5,8 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = { "com.vepeter.example.springcxfjpa" }, includeFilters = @Filter(classes = { ComponentScan.class }))
+@ComponentScan(basePackages = {
+        "com.vepeter.example.springcxfjpa" }, includeFilters = @Filter(classes = { ComponentScan.class }))
 public class ApplicationConfiguration {
 
 }

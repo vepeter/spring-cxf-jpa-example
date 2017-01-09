@@ -21,13 +21,13 @@ import com.vepeter.example.springcxfjpa.service.EmployeeService;
 public class EmplyeeResource {
 
     private EmployeeService employeeService;
-    
+
     @Autowired
     public EmplyeeResource(EmployeeService employeeService) {
         super();
         this.employeeService = employeeService;
     }
-    
+
     @GET
     @Produces("application/json")
     public Response listEmployees() {

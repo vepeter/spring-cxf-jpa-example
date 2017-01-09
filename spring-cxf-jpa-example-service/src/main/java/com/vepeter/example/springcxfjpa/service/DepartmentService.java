@@ -10,6 +10,6 @@ import com.vepeter.example.springcxfjpa.model.Department;
 public interface DepartmentService {
 
     List<Department> getAllDepartments();
-    
+
     void addDepartment(Department employee);
 }
